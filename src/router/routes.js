@@ -1,4 +1,3 @@
-import Login from '../view/auth/Login';
 import ExampleComponent from '../components/ExampleComponent';
 import Dashboard from '../view/Dashboard';
 import Home from '../view/Home';
@@ -20,16 +19,7 @@ export default [
         meta: {
             guard: "guest"
         },
-        children: [
-            {
-                path: '/login',
-                component: Login,
-                name: 'Login',
-                meta: {
-                    guard: 'guest'
-                }
-            },
-        ]
+
     },
     {
         path: '/dashboard',

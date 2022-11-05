@@ -4,8 +4,7 @@
             default-active="1"
             class="el-menu-vertical-demo"
             background-color="transparent"
-            text-color="#fff"
-            active-text-color="#F0A500"
+            active-text-color="#FFCF56"
             :router="true"
         >
             <h1 class="sidebar-title">Dashboard</h1>
@@ -35,7 +34,7 @@
                 </div>
             </el-menu-item>
             <el-menu-item class="sidebar-item" index="5" :route="{name: 'SponsorsComponent'}">
-                <div class="name=box">
+                <div class="name-box">
                     <i class="fa-solid fa-money-bill-trend-up"></i>
                     <span>Sponsors</span>
                 </div>
@@ -53,11 +52,6 @@
                 </div>
             </el-menu-item>
         </el-menu>
-        <div>
-            <el-button class="logout-btn" @click="logout">
-                Logout
-            </el-button>
-        </div>
     </div>
 </template>
 <script>
@@ -94,28 +88,33 @@ export default {
         border-radius: 1rem;
     }
 
+    .sidebar-item:hover{
+        transform: translateY(-10px);
+        transition: 1s;
+    }
+
     .sidebar-title{
-        color: #fff;
+        color: #FFCF56;
+        font-size: 26px;
+        font-weight: 700;
     }
 
     .name-box{
         display: flex;
         align-items: center;
+        color: #EDEAD0;
+        font-size: 16px;
+    }
+
+    .name-box:hover{
+        color: black;
     }
 
     .fa-solid{
         margin-right: 0.3rem;
-        color: #f8fafc;
+        font-size: 20px;
     }
 
-    .logout-btn{
-        border: none;
-    }
 
-    .logout-btn:hover{
-        background: #F0A500;
-        transition: .5s;
-        color: #000;
-    }
 }
 </style>
