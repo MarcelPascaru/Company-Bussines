@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: $font-family-sans-serif;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.view-title {
+    border-bottom: 3px solid #000;
+}
+
+.table {
+    min-height: calc(100vh - 120px);
+}
+
+.view-btn{
+    margin-right: 0.5rem !important;
+    background: #3A3845 !important;
+    border: none !important;
+}
+
+.view-btn:hover{
+    background: #F0A500 !important;
+    transition: .5s !important;
+}
+
+.delete-btn{
+    background: #3A3845 !important;
+    border: none !important;
+}
+
+.delete-btn:hover{
+    background: #d01c1c !important;
+    transition: .5s !important;
+}
+

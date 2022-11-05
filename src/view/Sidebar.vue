@@ -1,0 +1,121 @@
+<template>
+    <div class="sidebar">
+        <el-menu
+            default-active="1"
+            class="el-menu-vertical-demo"
+            background-color="transparent"
+            text-color="#fff"
+            active-text-color="#F0A500"
+            :router="true"
+        >
+            <h1 class="sidebar-title">Dashboard</h1>
+
+            <el-menu-item class="sidebar-item" index="1" :route="{ name: 'ExampleComponent' }">
+                <div class="name-box">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <span>Statistic</span>
+                </div>
+            </el-menu-item>
+            <el-menu-item  class="sidebar-item" index="2" :route="{ name: 'UsersView' }">
+                <div class="name-box">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Customers</span>
+                </div>
+            </el-menu-item>
+            <el-menu-item class="sidebar-item" index="3" :route="{name: 'TicketsComponent'}">
+                <div class="name-box">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>Tickets</span>
+                </div>
+            </el-menu-item>
+            <el-menu-item class="sidebar-item" index="4" :route="{name: 'BrandsComponent'}">
+                <div class="name-box">
+                    <i class="fa-solid fa-copyright"></i>
+                    <span>Brands</span>
+                </div>
+            </el-menu-item>
+            <el-menu-item class="sidebar-item" index="5" :route="{name: 'SponsorsComponent'}">
+                <div class="name=box">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                    <span>Sponsors</span>
+                </div>
+            </el-menu-item>
+            <el-menu-item class="sidebar-item" index="6" :route="{name: 'StaffComponent'}">
+                <div class="name-box">
+                    <i class="fa-solid fa-user-nurse"></i>
+                    <span>Staff</span>
+                </div>
+            </el-menu-item>
+            <el-menu-item class="sidebar-item" index="7" :route="{name: 'MaintenanceComponent'}">
+                <div class="name-box">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>Maintenance</span>
+                </div>
+            </el-menu-item>
+        </el-menu>
+        <div>
+            <el-button class="logout-btn" @click="logout">
+                Logout
+            </el-button>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+    name: "SidebarView",
+    components: {},
+
+    methods: {
+        logout() {
+            this.$store.dispatch('auth/logout').then(() => {
+                this.$router.push({name: 'Home'});
+            })
+        }
+    }
+};
+</script>
+
+<style lang="scss" scoped>
+.sidebar {
+    background-color: #3A3845;
+    height: calc(100vh - 40px);
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+
+    .el-menu-vertical-demo {
+        border-right: 0;
+    }
+
+    .sidebar-item{
+        background: #826F66;
+        border-radius: 1rem;
+    }
+
+    .sidebar-title{
+        color: #fff;
+    }
+
+    .name-box{
+        display: flex;
+        align-items: center;
+    }
+
+    .fa-solid{
+        margin-right: 0.3rem;
+        color: #f8fafc;
+    }
+
+    .logout-btn{
+        border: none;
+    }
+
+    .logout-btn:hover{
+        background: #F0A500;
+        transition: .5s;
+        color: #000;
+    }
+}
+</style>
