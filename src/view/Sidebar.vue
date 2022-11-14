@@ -39,12 +39,6 @@
                     <span>Sponsors</span>
                 </div>
             </el-menu-item>
-            <el-menu-item class="sidebar-item" index="6" :route="{name: 'StaffComponent'}">
-                <div class="name-box">
-                    <i class="fa-solid fa-user-nurse"></i>
-                    <span>Staff</span>
-                </div>
-            </el-menu-item>
             <el-menu-item class="sidebar-item" index="7" :route="{name: 'MaintenanceComponent'}">
                 <div class="name-box">
                     <i class="fa-solid fa-screwdriver-wrench"></i>

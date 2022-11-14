@@ -37,7 +37,7 @@
                 </el-button>
               </router-link>
               <user-update-component :user="scope.row"></user-update-component>
-              <el-button class="delete- btn" type="danger" @click="deleteUser(scope.row)">
+              <el-button class="delete-btn" type="danger" @click="deleteUser(scope.row)">
                 Delete
               </el-button>
             </div>

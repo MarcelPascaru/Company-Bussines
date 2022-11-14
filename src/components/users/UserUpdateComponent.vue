@@ -9,6 +9,9 @@
         <el-form-item label="User name">
           <el-input v-model="formUser.name" autocomplete="off"></el-input>
         </el-form-item>
+        <el-form-item label="User email">
+          <el-input v-model="formUser.email" autocomplete="off"></el-input>
+        </el-form-item>
         <el-form-item label="User age">
           <el-input v-model="formUser.age" autocomplete="off"></el-input>
         </el-form-item>

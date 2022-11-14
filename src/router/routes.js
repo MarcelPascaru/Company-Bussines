@@ -8,7 +8,6 @@ import Tickets from '../view/tickets/Tickets';
 import TicketDetails from '../components/tickets/TicketDetailsComponent';
 import Brands from '../components/BrandsComponent';
 import Sponsors from '../components/SponsorsComponent';
-import Staff from '../components/StuffComponent';
 import Maintenance from '../components/MaintenanceComponent';
 
 export default [
@@ -62,11 +61,6 @@ export default [
                 path: '/sponsors',
                 component: Sponsors,
                 name: 'SponsorsComponent',
-            },
-            {
-                path: '/staff',
-                component: Staff,
-                name: 'StaffComponent',
             },
             {
                 path: '/maintenance',
