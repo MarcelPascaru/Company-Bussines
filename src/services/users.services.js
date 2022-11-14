@@ -1,11 +1,11 @@
 import httpRequest from "@/services/httpRequest";
 
-const readUsers = (param) => {
-    return httpRequest.get(param);
+const readUsers = () => {
+    return httpRequest.get('employees');
 }
 
-const readUser = (param, id) => {
-    return httpRequest.get(`${param}/${id}`);
+const readUser = (id) => {
+    return httpRequest.get(`employee/${id}`);
 }
 
 const createUser = (params) => {

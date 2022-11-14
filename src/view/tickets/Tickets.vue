@@ -1,43 +1,43 @@
 <template>
   <div>
     <div class="view-title">
-      <h1>Users</h1>
-      <user-create-component></user-create-component>
+      <h1>Tickets</h1>
+      <ticket-create-component></ticket-create-component>
     </div>
     <div class="view-content">
       <el-table
           class="table"
-          :data="users"
+          :data="tickets"
           v-loading="loading"
           style="width: 100%">
         <el-table-column
-            prop="name"
-            label="Name">
+            prop="type"
+            label="Type">
         </el-table-column>
         <el-table-column
-            prop="email"
-            label="Email">
+            prop="price"
+            label="Price">
         </el-table-column>
         <el-table-column
-            prop="age"
-            label="Age">
+            prop="sale_date"
+            label="Sale_date">
         </el-table-column>
         <el-table-column
-            prop="designation"
-            label="Designation">
+            prop="sales"
+            label="Sales">
         </el-table-column>
         <el-table-column
             label="Actions"
             width="250">
           <template slot-scope="scope">
             <div class="d-flex">
-              <router-link :to="{ name: 'UserDetails', params: { id: scope.row.id }}">
+              <router-link :to="{ name: 'TicketDetails', params: { id: scope.row.id }}">
                 <el-button class="view-btn" type="primary">
                   View
                 </el-button>
               </router-link>
-              <user-update-component :user="scope.row"></user-update-component>
-              <el-button class="delete- btn" type="danger" @click="deleteUser(scope.row)">
+              <ticket-update-component :ticket="scope.row"></ticket-update-component>
+              <el-button class="delete-btn" type="danger" @click="deleteTicket(scope.row)">
                 Delete
               </el-button>
             </div>
@@ -49,20 +49,20 @@
 </template>
 
 <script>
-import {readUsers, deleteUser} from '@/services/users.services';
-import UserCreateComponent from "@/components/users/UserCreateComponent";
-import UserUpdateComponent from "@/components/users/UserUpdateComponent";
+import {readTickets, deleteTicket} from '@/services/tickets.services';
+import TicketCreateComponent from "@/components/tickets/TicketCreateComponent";
+import TicketUpdateComponent from "@/components/tickets/TicketUpdateComponent";
 
 export default {
-  name: 'UsersView',
+  name: 'TicketsView',
   components: {
-    UserCreateComponent,
-    UserUpdateComponent
+    TicketCreateComponent,
+    TicketUpdateComponent
   },
   data() {
     return {
       loading: true,
-      users: [],
+      tickets: [],
     }
   },
   mounted() {
@@ -70,28 +70,28 @@ export default {
   },
   methods: {
     search() {
-      readUsers()
+      readTickets()
           .then((response) => {
-            this.users = response.data;
+            this.tickets = response.data;
             this.loading = false;
           })
     },
-    deleteUser(user) {
+    deleteTicket(ticket) {
       this.$confirm(
-          `Are you sure you want to delete user ${user.name}?`,
+          `Are you sure you want to delete ticket ${ticket.id}?`,
           {
-            title: 'Delete user',
+            title: 'Delete ticket',
             confirmButtonText: "OK",
             cancelButtonText: "Cancel",
             type: "warning"
           }
       ).then(() => {
-        deleteUser(user.id)
+        deleteTicket(ticket.id)
             .then(() => {
               this.$notify({
                 title: 'Success',
                 type: 'success',
-                message: `The ${user.name} successfully deleted!`
+                message: `The ${ticket.id} successfully deleted!`
               });
               this.search();
             })
@@ -111,6 +111,4 @@ export default {
 .d-flex {
   display: flex;
 }
-
-
 </style>

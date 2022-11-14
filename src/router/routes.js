@@ -4,7 +4,8 @@ import Home from '../view/Home';
 import Users from '../view/users/Users';
 import UserDetails from '../components/users/UserDetailsComponent';
 import Error from '../view/Error';
-import Tickets from '../components/TicketsComponent';
+import Tickets from '../view/tickets/Tickets';
+import TicketDetails from '../components/tickets/TicketDetailsComponent';
 import Brands from '../components/BrandsComponent';
 import Sponsors from '../components/SponsorsComponent';
 import Staff from '../components/StuffComponent';
@@ -45,7 +46,12 @@ export default [
             {
                 path: '/tickets',
                 component: Tickets,
-                name: 'TicketsComponent',
+                name: 'TicketsView',
+            },
+            {
+                path: '/ticket/:id/details',
+                component: TicketDetails,
+                name: 'TicketDetails',
             },
             {
                 path: '/brands',

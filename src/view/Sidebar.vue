@@ -18,10 +18,10 @@
             <el-menu-item  class="sidebar-item" index="2" :route="{ name: 'UsersView' }">
                 <div class="name-box">
                     <i class="fa-solid fa-users"></i>
-                    <span>Customers</span>
+                    <span>Users</span>
                 </div>
             </el-menu-item>
-            <el-menu-item class="sidebar-item" index="3" :route="{name: 'TicketsComponent'}">
+            <el-menu-item class="sidebar-item" index="3" :route="{name: 'TicketsView'}">
                 <div class="name-box">
                     <i class="fa-solid fa-ticket"></i>
                     <span>Tickets</span>
