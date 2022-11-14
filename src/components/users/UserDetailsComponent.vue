@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     loadUser() {
-      readUser('employee', this.$route.params.id)
+      readUser(this.$route.params.id)
           .then((response) => {
             this.user = response.data;
           });
