@@ -6,7 +6,8 @@ import UserDetails from '../components/users/UserDetailsComponent';
 import Error from '../view/Error';
 import Tickets from '../view/tickets/Tickets';
 import TicketDetails from '../components/tickets/TicketDetailsComponent';
-import Brands from '../components/BrandsComponent';
+import Brands from '../view/brands/Brands';
+import BrandDetails from '../components/brands/BrandDetailsComponent'
 import Sponsors from '../components/SponsorsComponent';
 import Maintenance from '../components/MaintenanceComponent';
 
@@ -56,6 +57,11 @@ export default [
                 path: '/brands',
                 component: Brands,
                 name: 'BrandsComponent',
+            },
+            {
+                path: '/brand/:id/details',
+                component: BrandDetails,
+                name: 'BrandDetails',
             },
             {
                 path: '/sponsors',
