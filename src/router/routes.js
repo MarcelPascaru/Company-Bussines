@@ -10,7 +10,8 @@ import Brands from '../view/brands/Brands';
 import BrandDetails from '../components/brands/BrandDetailsComponent'
 import Sponsors from '../view/sponsors/Sponsors';
 import SponsorDetails from "@/components/sponsors/SponsorDetailsComponent";
-import Maintenance from '../components/MaintenanceComponent';
+import Services from '../view/services/Services';
+import ServiceDetails from '../components/services/ServicesDetailsComponent';
 
 export default [
     {
@@ -75,9 +76,14 @@ export default [
                 name: 'SponsorDetails',
             },
             {
-                path: '/maintenance',
-                component: Maintenance,
-                name: 'MaintenanceComponent',
+                path: '/services',
+                component: Services,
+                name: 'ServicesComponent',
+            },
+            {
+                path: '/service/:id/details',
+                component: ServiceDetails,
+                name: 'ServiceDetails',
             }
         ]
     },

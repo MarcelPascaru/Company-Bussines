@@ -39,10 +39,10 @@
                     <span>Sponsors</span>
                 </div>
             </el-menu-item>
-            <el-menu-item class="sidebar-item" index="7" :route="{name: 'MaintenanceComponent'}">
+            <el-menu-item class="sidebar-item" index="7" :route="{name: 'ServicesComponent'}">
                 <div class="name-box">
                     <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <span>Maintenance</span>
+                    <span>Services</span>
                 </div>
             </el-menu-item>
         </el-menu>
