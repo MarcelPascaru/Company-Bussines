@@ -9,7 +9,7 @@
         >
             <h1 class="sidebar-title">Dashboard</h1>
 
-            <el-menu-item class="sidebar-item" index="1" :route="{ name: 'ExampleComponent' }">
+            <el-menu-item class="sidebar-item" index="1" :route="{ name: 'StatisticsView' }">
                 <div class="name-box">
                     <i class="icon fa-solid fa-chart-simple"></i>
                     <span>Statistic</span>

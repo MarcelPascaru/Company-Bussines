@@ -1,6 +1,5 @@
-import ExampleComponent from '../components/ExampleComponent';
 import Dashboard from '../view/Dashboard';
-import Home from '../view/Home';
+import StatisticsView from '../view/statistics/Statistics';
 import Users from '../view/users/Users';
 import UserDetails from '../components/users/UserDetailsComponent';
 import Error from '../view/Error';
@@ -16,24 +15,14 @@ import ServiceDetails from '../components/services/ServicesDetailsComponent';
 export default [
     {
         path: '/',
-        name: 'HomeView',
-        redirect: {name: 'Login'},
-        component: Home,
-        meta: {
-            guard: "guest"
-        },
-
-    },
-    {
-        path: '/dashboard',
         component: Dashboard,
         name: 'DashboardView',
-        redirect: { name: 'ExampleComponent' },
+        redirect: { name: 'StatisticsView' },
         children: [
             {
-              path: '/example',
-              component: ExampleComponent,
-              name: 'ExampleComponent'
+              path: '/statistics',
+              component: StatisticsView,
+              name: 'StatisticsView'
             },
             {
                 path: '/users',
