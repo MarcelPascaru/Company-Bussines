@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: $font-family-sans-serif;
+    background: #4e4c54;
 }
 
 aside {
@@ -10,6 +11,7 @@ aside {
 }
 
 .view-title {
+    color: #f8fafc;
     border-bottom: 3px solid #000;
 }
 
@@ -39,5 +41,65 @@ aside {
     transition: .5s !important;
 }
 
+.el-button{
+    background: #3A3845;
+    padding: .5rem;
+    border: none;
+    color: #fff;
+}
 
+.el-button:hover{
+    background: #0c5419;
+    transition: .5s;
+    color: #fff;
+}
 
+.el-button--text{
+    margin-bottom: 0.5rem;
+}
+
+.icon{
+    color: #F18F01 !important;
+}
+
+.el-table{
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.el-table tr{
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.el-table tr{
+    background: transparent !important;
+}
+
+.el-table th.el-table__cell{
+    background-color: transparent !important;
+}
+
+.el-table--fit{
+    border-radius: 1rem !important;
+    margin-top: 1rem !important;
+    color: #f8fafc !important;
+}
+
+.el-table__row:hover{
+    color: black !important;
+    transition: 0.5s all !important;
+}
+
+.el-table td.el-table__cell{
+    border-bottom: 1px solid #413f48;
+}
+
+.el-table thead{
+    color: #f8fafc;
+}
+
+.el-descriptions__body{
+    background: #413f48 !important;
+    color: #f8fafc !important;
+    padding: 1rem !important;
+    border-radius: 1rem !important;
+}

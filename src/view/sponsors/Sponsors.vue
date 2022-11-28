@@ -20,11 +20,11 @@
         </el-table-column>
         <el-table-column
             prop="budget"
-            label="Budget">
+            label="Budget($)">
         </el-table-column>
         <el-table-column
             prop="income"
-            label="Income">
+            label="Income(%)">
         </el-table-column>
         <el-table-column
             label="Actions"

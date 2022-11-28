@@ -16,7 +16,7 @@
         </el-table-column>
         <el-table-column
             prop="price"
-            label="Price">
+            label="Price($)">
         </el-table-column>
         <el-table-column
             prop="sale_date"

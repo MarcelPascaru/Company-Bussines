@@ -20,7 +20,7 @@
         </el-table-column>
         <el-table-column
             prop="costs"
-            label="Costs">
+            label="Costs($)">
         </el-table-column>
         <el-table-column
             label="Actions"

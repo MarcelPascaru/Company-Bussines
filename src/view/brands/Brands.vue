@@ -12,7 +12,8 @@
           style="width: 100%">
         <el-table-column
             prop="type"
-            label="Type">
+            label="Type"
+            class="table">
         </el-table-column>
         <el-table-column
             prop="amount"
@@ -104,6 +105,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+
 
 .d-flex {
   display: flex;

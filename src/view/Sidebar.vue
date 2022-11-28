@@ -11,37 +11,37 @@
 
             <el-menu-item class="sidebar-item" index="1" :route="{ name: 'ExampleComponent' }">
                 <div class="name-box">
-                    <i class="fa-solid fa-chart-simple"></i>
+                    <i class="icon fa-solid fa-chart-simple"></i>
                     <span>Statistic</span>
                 </div>
             </el-menu-item>
             <el-menu-item  class="sidebar-item" index="2" :route="{ name: 'UsersView' }">
                 <div class="name-box">
-                    <i class="fa-solid fa-users"></i>
+                    <i class="icon fa-solid fa-users"></i>
                     <span>Users</span>
                 </div>
             </el-menu-item>
             <el-menu-item class="sidebar-item" index="3" :route="{name: 'TicketsView'}">
                 <div class="name-box">
-                    <i class="fa-solid fa-ticket"></i>
+                    <i class="icon fa-solid fa-ticket"></i>
                     <span>Tickets</span>
                 </div>
             </el-menu-item>
             <el-menu-item class="sidebar-item" index="4" :route="{name: 'BrandsComponent'}">
                 <div class="name-box">
-                    <i class="fa-solid fa-copyright"></i>
+                    <i class="icon fa-solid fa-copyright"></i>
                     <span>Brands</span>
                 </div>
             </el-menu-item>
             <el-menu-item class="sidebar-item" index="5" :route="{name: 'SponsorsComponent'}">
                 <div class="name-box">
-                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                    <i class="icon fa-solid fa-money-bill-trend-up"></i>
                     <span>Sponsors</span>
                 </div>
             </el-menu-item>
             <el-menu-item class="sidebar-item" index="7" :route="{name: 'ServicesComponent'}">
                 <div class="name-box">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <i class="icon fa-solid fa-screwdriver-wrench"></i>
                     <span>Services</span>
                 </div>
             </el-menu-item>
@@ -88,7 +88,7 @@ export default {
     }
 
     .sidebar-title{
-        color: #FFCF56;
+        color: #F18F01;
         font-size: 26px;
         font-weight: 700;
     }
