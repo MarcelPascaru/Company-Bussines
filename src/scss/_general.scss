@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: $font-family-sans-serif;
-    background: #4e4c54;
+    background: #ffffff;
 }
 
 aside {
@@ -11,7 +11,7 @@ aside {
 }
 
 .view-title {
-    color: #f8fafc;
+    color: #020202;
     border-bottom: 3px solid #000;
 }
 
@@ -102,4 +102,18 @@ aside {
     color: #f8fafc !important;
     padding: 1rem !important;
     border-radius: 1rem !important;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #3e3d48;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #f18f01;
 }
