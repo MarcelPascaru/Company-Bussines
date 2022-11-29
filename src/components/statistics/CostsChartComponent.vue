@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>Statistics</h1>
     <doughnut :chart-options="chartOptions"
          :chart-data="chartData"
          :chart-id="chartId"
@@ -9,7 +8,8 @@
          :css-classes="cssClasses"
          :styles="styles"
          :width="400"
-         :height="400">
+         :height="400"
+    >
     </doughnut>
   </div>
 </template>
@@ -28,7 +28,7 @@ import {
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale)
 
 export default {
-  name: "StatisticsView",
+  name: "PieChart",
   components: {
     Doughnut
   },
@@ -65,10 +65,10 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
+        labels: ['Employers', 'Equipment', 'Services', 'Transport'],
         datasets: [
           {
-            backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
+            backgroundColor: ['#D17A22', '#4C061D', '#712F79', '#BF0603'],
             data: [40, 20, 80, 10]
           }
         ]

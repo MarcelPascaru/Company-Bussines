@@ -1,5 +1,8 @@
 import Dashboard from '../view/Dashboard';
-import StatisticsView from '../view/statistics/Statistics';
+import StatisticsView from '../view/statistics/Statistic';
+import LineChart from '../components/statistics/GeneralChartComponent';
+import PieChart from '../components/statistics/CostsChartComponent';
+import BarChart from '../components/statistics/IncomesChartComponent';
 import Users from '../view/users/Users';
 import UserDetails from '../components/users/UserDetailsComponent';
 import Error from '../view/Error';
@@ -23,6 +26,21 @@ export default [
               path: '/statistics',
               component: StatisticsView,
               name: 'StatisticsView'
+            },
+            {
+              path: '/statistics',
+              component: LineChart,
+              name: 'LineChart'
+            },
+            {
+              path: '/statistics',
+              component: PieChart,
+              name: 'PieChart'
+            },
+            {
+                path: '/statistics',
+                component: BarChart,
+                name: 'BarChart'
             },
             {
                 path: '/users',
